@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="448.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
+   <children>
+      <Label fx:id="l1" layoutX="50.0" layoutY="69.0" prefHeight="107.0" prefWidth="355.0" text="Pitanje" />
+      <Button fx:id="btn1" layoutX="50.0" layoutY="216.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="57.0" prefWidth="150.0" text="Button" />     
+      <Button fx:id="btn2" layoutX="257.0" layoutY="216.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="57.0" prefWidth="150.0" text="Button" />
+      <Button fx:id="btn3" layoutX="50.0" layoutY="290.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="57.0" prefWidth="150.0" text="" />
+      <Button fx:id="btn4" layoutX="257.0" layoutY="290.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="57.0" prefWidth="150.0" text="" />
+      <Label fx:id="l2" contentDisplay="RIGHT" layoutX="94.0" layoutY="378.0" prefHeight="28.0" prefWidth="132.0" text="Vas Broj poena je:" />
+      <Label fx:id="l3" layoutX="245.0" layoutY="378.0" prefHeight="28.0" prefWidth="132.0" text="Label" />
+   </children>
+</AnchorPane>
