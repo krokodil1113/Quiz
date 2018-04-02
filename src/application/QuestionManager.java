@@ -29,6 +29,7 @@ public class QuestionManager {
 		qd.add(cetvrtoPtinje);
 	}
 	
+	// TODO: fix counter 
 	public void isCorrect(String userAnsw) {
 		System.out.println(currentQuestion);
 		if (userAnsw.equals(getQd().get(currentQuestion).getSolution())) {
