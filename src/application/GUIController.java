@@ -13,7 +13,7 @@ public class GUIController {
 
 	QuestionManager qManager = new QuestionManager();
 
-	int proba = 0;
+	// int questionNum = 0;
 
 	@FXML
 	private Label l1;
@@ -43,33 +43,35 @@ public class GUIController {
 
 	public void buttonClick(ActionEvent event) {
 
-		Button anyButton = (Button) event.getSource();
-		String userAnsw = anyButton.getText();
+		
+		if (!qManager.isTheEnd()) {
+			Button anyButton = (Button) event.getSource();
+			String userAnsw = anyButton.getText();
 
-		qManager.isCorrect(userAnsw);
-		proba = qManager.setNextQuestion2();
-
-		setNextQuest();
-
+			qManager.isCorrect(userAnsw);
+			qManager.setNextQuestion();
+			DisplayQuestion();
+		}
+		
 	}
 
 	
-	private void setNextQuest() {
-
-		
-			l1.setText(qManager.getQd().get(proba).getQuestion());
-			btn1.setText(qManager.getQd().get(proba).getAnswers().get(0));
-			btn2.setText(qManager.getQd().get(proba).getAnswers().get(1));
-			btn3.setText(qManager.getQd().get(proba).getAnswers().get(2));
-			btn4.setText(qManager.getQd().get(proba).getAnswers().get(3));
-
+	private void DisplayQuestion() {
+			
+		if (!qManager.isTheEnd()) {
 			l3.setText(String.valueOf(qManager.points));
-
-			
-			
+			l1.setText(qManager.getTextLabel1());
+			btn1.setText(qManager.getTextButton1());
+			btn2.setText(qManager.getTextButton2());
+			btn3.setText(qManager.getTextButton3());
+			btn4.setText(qManager.getTextButton4());
+		}
+		else {
+			l3.setText("KRAJ! Broj poena: " + qManager.points );
+		}
+		
 	}
 		// System.out.println(qManager.points);
-
-	}
+}
 
 
